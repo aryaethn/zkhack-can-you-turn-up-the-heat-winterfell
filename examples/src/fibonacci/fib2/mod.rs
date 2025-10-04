@@ -98,6 +98,7 @@ impl Example for FibExample {
     }
 
     fn verify(&self, proof: StarkProof) -> Result<(), VerifierError> {
+        println!("Verification for fib2 as the Prover! for 123");
         println!("proof: {}", hex::encode(proof.to_bytes()));
         let inputs = FibInputs {
             start: (BaseElement::ZERO, BaseElement::ONE),
